@@ -30,13 +30,13 @@ Name = "Instance-${count.index + 1}"
 #aws_vpc
 
 resource "aws_vpc" "dev_vpc" {
-  cidr_block = "10.1.0.0/16"
+  cidr_block = "10.0.0.0/16"
 }
 
 #aws_subnet
 
 resource "aws_subnet" "dev_vpc_subnet_1" {
   vpc_id = aws_vpc.dev_vpc.id #from_line_32
-  cidr_block = "10.0.1.0/24"
+  cidr_block = "10.0.10.0/24"
   availability_zone = "ap-south-1a"
 }
