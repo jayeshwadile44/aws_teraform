@@ -1,0 +1,7 @@
+#aws_subnet
+
+resource "aws_subnet" "dev_vpc_subnet_1" {
+  vpc_id = aws_vpc.dev_vpc.id #from_line_32
+  cidr_block = "10.0.10.0/24"
+  availability_zone = "ap-south-1a"
+}
