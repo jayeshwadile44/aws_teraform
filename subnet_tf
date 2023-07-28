@@ -1,7 +1,56 @@
 #aws_subnet
 
-resource "aws_subnet" "dev_vpc_subnet_1" {
-  vpc_id = aws_vpc.dev_vpc.id #from_line_32
-  cidr_block = "10.0.10.0/24"
+resource "aws_subnet" "public_A" {       #public_non_prod
+  vpc_id            = aws_vpc.dev_vpc.id #from_vpc_resource
+  cidr_block        = "10.47.0.0/21"     #cidr_v2
   availability_zone = "ap-south-1a"
 }
+
+resource "aws_subnet" "public_B" {
+  vpc_id            = aws_vpc.dev_vpc.id #from_vpc_resource
+  cidr_block        = "10.47.8.0/21"
+  availability_zone = "ap-south-1a"
+}
+
+resource "aws_subnet" "public_C" {
+  vpc_id            = aws_vpc.dev_vpc.id #from_vpc_resource
+  cidr_block        = "10.47.16.0/21"
+  availability_zone = "ap-south-1a"
+}
+
+resource "aws_subnet" "private_A" {      #private_non_prod
+  vpc_id            = aws_vpc.dev_vpc.id #from_vpc_resource
+  cidr_block        = "10.47.40.0/21"
+  availability_zone = "ap-south-1a"
+}
+
+resource "aws_subnet" "private_B" {
+  vpc_id            = aws_vpc.dev_vpc.id #from_vpc_resource
+  cidr_block        = "10.47.48.0/21"
+  availability_zone = "ap-south-1a"
+}
+
+resource "aws_subnet" "private_C" {
+  vpc_id            = aws_vpc.dev_vpc.id #from_vpc_resource
+  cidr_block        = "10.47.56.0/21"
+  availability_zone = "ap-south-1a"
+}
+
+resource "aws_subnet" "secure_A" {       #secure_non_prod
+  vpc_id            = aws_vpc.dev_vpc.id #from_vpc_resource
+  cidr_block        = "10.47.80.0/21"
+  availability_zone = "ap-south-1a"
+}
+
+resource "aws_subnet" "secure_B" {
+  vpc_id            = aws_vpc.dev_vpc.id #from_vpc_resource
+  cidr_block        = "10.47.88.0/21"
+  availability_zone = "ap-south-1a"
+}
+
+resource "aws_subnet" "secure_C" {
+  vpc_id            = aws_vpc.dev_vpc.id #from_vpc_resource
+  cidr_block        = "10.47.96.0/21"
+  availability_zone = "ap-south-1a"
+}
+
