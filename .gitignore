@@ -1,0 +1,7 @@
+.terraform
+*.tfstate*
+provider.tf
+vpc_project.zip
+awscliv2.zip
+.terraform.lock.hcl
+aws
