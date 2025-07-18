@@ -42,4 +42,3 @@ Edit
 terraform init
 terraform plan
 terraform apply
-⚠️ Warning: This code will create real AWS resources. Charges may apply.
